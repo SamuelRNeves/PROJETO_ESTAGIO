@@ -15,4 +15,3 @@ with zipfile.ZipFile(zip_anexos_path, 'w', zipfile.ZIP_DEFLATED) as zipf:
             print(f"✅ '{anexo}' adicionado ao '{zip_anexos_path}'")
         else:
             print(f"❌ Erro: O arquivo {anexo} não foi encontrado!")
-

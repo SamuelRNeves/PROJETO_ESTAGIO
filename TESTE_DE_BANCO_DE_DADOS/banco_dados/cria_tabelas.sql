@@ -1,8 +1,6 @@
 CREATE DATABASE projeto_estagio;
 USE projeto_estagio;
 
-DROP TABLE demonstracoes_contabeis;
-
 -- Tabela para os dados cadastrais das operadoras (arquivo CSV das operadoras)
 CREATE TABLE operadoras (
     registro_ans VARCHAR(20),

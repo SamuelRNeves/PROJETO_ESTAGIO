@@ -1,4 +1,4 @@
--- Top 10 operadoras com maiores despesas no último trimestre
+-- Top s 10 operadoras com maiores despesas em "EVENTOS/ SINISTROS CONHECIDOS OU AVISADOS DE ASSISTÊNCIA A SAÚDE MEDICO HOSPITALAR" no último trimestre
 SELECT 
     o.razao_social,
     o.cnpj,

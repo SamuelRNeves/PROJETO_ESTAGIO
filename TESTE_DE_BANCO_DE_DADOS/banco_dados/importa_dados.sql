@@ -4,7 +4,7 @@ SHOW VARIABLES LIKE 'secure_file_priv';
 
 
 -- Importa o CSV das Operadoras para a tabela operadoras
-LOAD DATA LOCAL INFILE 'C:/Users/samue/OneDrive/Área de Trabalho/projeto_estagio/data/operadoras_de_plano_de_saude_ativas/Relatorio_cadop.csv'
+LOAD DATA LOCAL INFILE 'C:/Users/samue/OneDrive/Área de Trabalho/projeto_estagio/TESTE_DE_TRANSFORMACAO_DE_DADOS/data/operadoras_de_plano_de_saude_ativas/Relatorio_cadop.csv'
 INTO TABLE operadoras
 CHARACTER SET utf8mb4
 FIELDS TERMINATED BY ';'
@@ -26,7 +26,7 @@ SET
 
 
 -- Importa os dados contábeis do 1T2023
-LOAD DATA LOCAL INFILE 'C:/Users/samue/OneDrive/Área de Trabalho/projeto_estagio/data/demonstracoes_contabeis/1T2023.csv'
+LOAD DATA LOCAL INFILE 'C:/Users/samue/OneDrive/Área de Trabalho/projeto_estagio/TESTE_DE_TRANSFORMACAO_DE_DADOS//data/demonstracoes_contabeis/1T2023.csv'
 INTO TABLE demonstracoes_contabeis
 FIELDS TERMINATED BY ';'
 ENCLOSED BY '"'
@@ -45,7 +45,7 @@ SET
 
 
 -- Importa os dados contábeis do 1T2024
-LOAD DATA LOCAL INFILE 'C:/Users/samue/OneDrive/Área de Trabalho/projeto_estagio/data/demonstracoes_contabeis/1T2024.csv'
+LOAD DATA LOCAL INFILE 'C:/Users/samue/OneDrive/Área de Trabalho/projeto_estagio/TESTE_DE_TRANSFORMACAO_DE_DADOS/data/demonstracoes_contabeis/1T2024.csv'
 
 INTO TABLE demonstracoes_contabeis
 FIELDS TERMINATED BY ';'
@@ -67,7 +67,7 @@ SET
 
 
 -- Importa os dados contábeis do 2T2023
-LOAD DATA LOCAL INFILE 'C:/Users/samue/OneDrive/Área de Trabalho/projeto_estagio/data/demonstracoes_contabeis/2T2023.csv'
+LOAD DATA LOCAL INFILE 'C:/Users/samue/OneDrive/Área de Trabalho/projeto_estagio/TESTE_DE_TRANSFORMACAO_DE_DADOS/data/demonstracoes_contabeis/2T2023.csv'
 
 INTO TABLE demonstracoes_contabeis
 FIELDS TERMINATED BY ';'
@@ -89,7 +89,7 @@ SET
 
 
 -- Importa os dados contábeis do 2T2024
-LOAD DATA LOCAL INFILE 'C:/Users/samue/OneDrive/Área de Trabalho/projeto_estagio/data/demonstracoes_contabeis/2T2024.csv'
+LOAD DATA LOCAL INFILE 'C:/Users/samue/OneDrive/Área de Trabalho/projeto_estagio/TESTE_DE_TRANSFORMACAO_DE_DADOS/data/demonstracoes_contabeis/2T2024.csv'
 
 INTO TABLE demonstracoes_contabeis
 FIELDS TERMINATED BY ';'
@@ -109,7 +109,7 @@ SET
 
 
 -- Importa os dados contábeis do 3T2023
-LOAD DATA LOCAL INFILE 'C:/Users/samue/OneDrive/Área de Trabalho/projeto_estagio/data/demonstracoes_contabeis/3T2023.csv'
+LOAD DATA LOCAL INFILE 'C:/Users/samue/OneDrive/Área de Trabalho/projeto_estagio/TESTE_DE_TRANSFORMACAO_DE_DADOS/data/demonstracoes_contabeis/3T2023.csv'
 
 INTO TABLE demonstracoes_contabeis
 FIELDS TERMINATED BY ';'
@@ -130,7 +130,7 @@ SET
 
 
 -- Importa os dados contábeis do 3T2024
-LOAD DATA LOCAL INFILE 'C:/Users/samue/OneDrive/Área de Trabalho/projeto_estagio/data/demonstracoes_contabeis/3T2024.csv'
+LOAD DATA LOCAL INFILE 'C:/Users/samue/OneDrive/Área de Trabalho/projeto_estagio/TESTE_DE_TRANSFORMACAO_DE_DADOS/data/demonstracoes_contabeis/3T2024.csv'
 
 INTO TABLE demonstracoes_contabeis
 FIELDS TERMINATED BY ';'
@@ -150,7 +150,7 @@ SET
 
 
 -- Importa os dados contábeis do 4T2023
-LOAD DATA LOCAL INFILE 'C:/Users/samue/OneDrive/Área de Trabalho/projeto_estagio/data/demonstracoes_contabeis/4T2023.csv'
+LOAD DATA LOCAL INFILE 'C:/Users/samue/OneDrive/Área de Trabalho/projeto_estagio/TESTE_DE_TRANSFORMACAO_DE_DADOS/data/demonstracoes_contabeis/4T2023.csv'
 
 INTO TABLE demonstracoes_contabeis
 FIELDS TERMINATED BY ';'
@@ -169,7 +169,7 @@ SET
 
 
 -- Importa os dados contábeis do 4T2024
-LOAD DATA LOCAL INFILE 'C:/Users/samue/OneDrive/Área de Trabalho/projeto_estagio/data/demonstracoes_contabeis/4T2024.csv'
+LOAD DATA LOCAL INFILE 'C:/Users/samue/OneDrive/Área de Trabalho/projeto_estagio/TESTE_DE_TRANSFORMACAO_DE_DADOS/data/demonstracoes_contabeis/4T2024.csv'
 INTO TABLE demonstracoes_contabeis
 FIELDS TERMINATED BY ';'
 ENCLOSED BY '"'

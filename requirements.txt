@@ -1,0 +1,11 @@
+fastapi
+flask
+flask-cors
+uvicorn
+pandas
+requests
+pdfplumber
+unittest
+httpx
+redis
+fastapi-cache
