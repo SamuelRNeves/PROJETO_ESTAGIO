@@ -1,0 +1,23 @@
+# Python
+env/
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Node
+node_modules/
+dist/
+
+# Dados sensíveis
+.env
+*.csv
+*.xlsx
+
+# Docker
+docker-compose.override.yml
+
+# IDE
+.vscode/
+.idea/
