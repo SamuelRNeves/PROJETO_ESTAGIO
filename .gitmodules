@@ -1,0 +1,3 @@
+[submodule "TESTE_DE_API/frontend/frontend"]
+	path = TESTE_DE_API/frontend/frontend
+	url = https://github.com/samuerneves/repositorio-frontend.git
