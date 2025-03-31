@@ -1,32 +1,30 @@
-version: '3.8'
-
 services:
   api:
-    build: ./TESTE_DE_API/server   # Diretório da API FastAPI
+    build: ./TESTE_DE_API/server  # Apontando para o diretório correto
     ports:
-      - "8000:8000"                # Expondo a API na porta 8000
+      - "8000:8000"               # Expondo a API na porta 8000
     environment:
       - REDIS_URL=redis://redis:6379  # URL do Redis para cache
     depends_on:
-      - redis  # A API depende do Redis para cache
+      - redis
     volumes:
       - ./TESTE_DE_API/server:/app      # Volumes para permitir edição no código
       - ./TESTE_DE_TRANSFORMACAO_DE_DADOS/data:/app/data  # Volumes para dados
 
   redis:
-    image: redis:alpine             # Usando imagem oficial do Redis
+    image: redis:alpine            # Usando imagem oficial do Redis
     ports:
-      - "6379:6379"                 # Expondo a porta padrão do Redis
+      - "6379:6379"                # Expondo a porta padrão do Redis
     volumes:
-      - redis_data:/data            # Volume persistente para dados do Redis
+      - redis_data:/data           # Volume persistente para dados do Redis
 
   # Serviço de frontend (opcional)
   frontend:
-    build: ./TESTE_DE_API/frontend # Diretório do frontend
+    build: ./TESTE_DE_API/frontend  # Diretório do frontend
     ports:
       - "3000:3000"                 # Porta do frontend
     depends_on:
-      - api                         # O frontend depende da API para funcionar
+      - api                        # O frontend depende da API para funcionar
 
 # Definindo volumes persistentes
 volumes:

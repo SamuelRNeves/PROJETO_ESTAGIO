@@ -40,10 +40,10 @@ def extrair_tabela(pdf_path, inicio=3, fim=181):
     """Extrai tabelas das páginas específicas com tratamento robusto"""
     dados = []
     with pdfplumber.open(pdf_path) as pdf:
-        for i in range(inicio-1, fim):  # pdfplumber usa indexação 0-based
+        for i in range(inicio-1, fim):  
             pagina = pdf.pages[i]
             
-            # Configuração otimizada para tabelas grandes
+            
             config = {
                 "vertical_strategy": "lines", 
                 "horizontal_strategy": "lines",

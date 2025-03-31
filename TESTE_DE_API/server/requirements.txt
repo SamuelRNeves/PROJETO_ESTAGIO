@@ -1,0 +1,8 @@
+fastapi
+uvicorn
+pandas
+redis
+fastapi-cache2
+aioredis
+pendulum
+httpx

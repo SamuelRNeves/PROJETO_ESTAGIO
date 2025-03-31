@@ -8,9 +8,9 @@ from typing import List, Dict, Optional
 import unittest
 import httpx
 from fastapi.testclient import TestClient
-from fastapi_cache import FastAPICache
-from fastapi_cache.backends.redis import RedisBackend
-from fastapi_cache.decorator import cache
+#from fastapi_cache2 import FastAPICache
+#from fastapi_cache2.backends.redis import RedisBackend
+#from fastapi_cache.decorator import cache
 import redis
 import time
 import os
@@ -61,11 +61,11 @@ def load_operadoras():
         raise
 
 # Inicialização do Redis e Cache
-@app.on_event("startup")
-async def startup():
-    redis_url = os.getenv("REDIS_URL", "redis://localhost:6379")
-    redis_conn = redis.from_url(redis_url, encoding="utf-8", decode_responses=True)
-    FastAPICache.init(RedisBackend(redis_conn), prefix="operadoras-cache")
+#@app.on_event("startup")
+#async def startup():
+    #redis_url = os.getenv("REDIS_URL", "redis://localhost:6379")
+    #redis_conn = redis.from_url(redis_url, encoding="utf-8", decode_responses=True)
+    #FastAPICache.init(RedisBackend(redis_conn), prefix="operadoras-cache")
 
 try:
     df_operadoras = load_operadoras()
@@ -84,7 +84,7 @@ async def health_check():
     return {"status": "online", "message": "API operacional"}
 
 @app.get("/api/buscar", response_model=SearchResult)
-@cache(expire=300)  # Cache de 5 minutos
+#@cache(expire=300)  # Cache de 5 minutos
 async def buscar_operadoras(
     request: Request,
     query: str = Query(..., min_length=2),

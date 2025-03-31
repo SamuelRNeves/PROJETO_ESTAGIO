@@ -1,75 +1,86 @@
-# 🚀 Projeto de Testes e Processamento de Dados  
-
-Este repositório contém diferentes módulos que realizam testes de API, transformação de dados e web scraping. O projeto usa **FastAPI** para servir a API, **pandas** para manipulação de dados, **pdfplumber** para extração de informações de PDFs e **requests** para web scraping.
-
-## 🔧 **1. Instalação das Dependências**  
-
-Antes de rodar o projeto, é necessário instalar as bibliotecas necessárias.    
+# 🚀 Projeto estágio intutive care 
 
 ### 📌 **Requisitos**  
 
 - Python 3.8+  
 - pip instalado  
 
-### 📥 **Instalar as Dependências**  
+
 
 Execute o comando abaixo no terminal:  
 
-```sh
-pip install -r requirements.txt
 
------
-
-🏃 2. Executando os Módulos
-cd TESTE_DE_API
-python app.py
-
-📡 2.1 API com Flask
-A API básica está no arquivo app.py e serve para buscar operadoras armazenadas em um CSV.
+ # 1. Executando a api
+    cd TESTE_DE_API
+    cd server
+# Crie o ambiente virtual
+    python -m venv env
+# Ativar o ambiente virtual:
+# No Windows (cmd ou PowerShell):
+    env\Scripts\activate
+# No Git Bash:
+    source env/Scripts/activate
+    pip install -r requirements.txt
+# Rodar o servidor
+    python server.py
 
 Exemplo de requisição:
 curl http://localhost:8000/api/buscar?query=Bradesco
 
 
-⚡ 2.2 API com FastAPI
-A API mais avançada está no arquivo server.py e inclui cache com Redis para melhorar o desempenho.
 
-Execute o comando abaixo para rodar a API FastAPI:
-cd TESTE_DE_API
-cd server
-python server.py
+# 2. Frontend (Vue.js)
+# após voltar para o diretório raiz do projeto
+    cd TESTE_DE_API
+    cd frontend
+# Instale as dependências do Node.js:
+    npm install
+# Rode o servidor de desenvolvimento
+    npm run serve
+ A página estará disponivel em http://localhost:8080
 
 
-📊 3. Extração e Transformação de Dados
+ # 3. Transformação de Dados 📊
+
 O módulo extrator.py extrai tabelas de arquivos PDF e salva os dados processados em formatos CSV e ZIP.
+# vá para o diretório
+    cd TESTE_DE_TRANSFORMACAO_DE_DADOS
+    cd transformacao_dados
+# Crie o ambiente virtual
+    python -m venv venv
+# Ative o ambiente virtual
+    source venv/Scripts/activate
+# baixe as dependencias 
+    pip install -r requirements.txt
+# Execute o script
+    python extrator.py
+ O script vai gerar uma pasta chamada output que contera o arquivo zipado e o csv
 
---cd TESTE_DE_TRANSFORMACAO_DE_DADOS
---cd transformacao_dados
---python extrator.py
 
+ # 4. Web Scraping e Compactação 🌐
 
-🌐 4. Web Scraping e Compactação
-
-📥 4.1 Baixar Arquivos
-O arquivo scraper.py faz o download de documentos oficiais de um site público.
+O arquivo scraper.py faz o download de documentos oficiais do site do ministério da saúde .
 
 Execute o seguinte comando para baixar:
 
-cd TESTE_DE_WEB_SCRAPING
-python scraper.py
+    cd TESTE_DE_WEB_SCRAPING
+# Crie o ambiente virtual
+    python -m venv venv
+# Ative o ambiente virtual
+    source venv/Scripts/activate
+# Baixe as dependecias 
+    pip install -r requirements.txt
+# Rode o script        
+    python scraper.py
 
-🗜️ 4.2 Compactar Arquivos
-Após baixar os arquivos, você pode compactá-los com o arquivo compactador.py.
+  # 4.2 Compactar Arquivos
 
-Execute o seguinte comando para compactar os arquivos:
+# Rode o script
+        python compactador.py
+    O script vai gerar um arquivo zipado chamado Anexos.zip     
 
-python compactador.py
 
-🧪 5. Testes Automatizados
-O projeto contém testes unitários para validar a API FastAPI. Para rodar os testes, execute o seguinte comando:
-Para rodar os testes, execute:
-cd TESTE_DE_API
-python -m unittest server.py
+🧪
 
 ## 📝 Testando a API com Postman
 

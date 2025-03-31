@@ -1,0 +1,74 @@
+{
+	"info": {
+		"_postman_id": "b4aec89f-8d25-4233-bb97-cd40e9f48a84",
+		"name": "Operadoras de Saúde API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39164115"
+	},
+	"item": [
+		{
+			"name": "Buscar Operadoras",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{base_url}}/api/buscar\n?query=Bradesco&limit=10",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"buscar\n"
+					],
+					"query": [
+						{
+							"key": "query",
+							"value": "Bradesco"
+						},
+						{
+							"key": "limit",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar por CNPJ",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{base_url}}/api/buscar?query=17505793000101",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"buscar"
+					],
+					"query": [
+						{
+							"key": "query",
+							"value": "17505793000101"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
