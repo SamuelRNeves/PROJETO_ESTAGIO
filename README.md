@@ -1,4 +1,4 @@
-# 🚀 Projeto estágio intutive care 
+# 🚀 Projeto estágio intuitive care 
 
 ### 📌 **Requisitos**  
 
